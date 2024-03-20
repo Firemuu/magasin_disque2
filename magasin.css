@@ -31,14 +31,14 @@ p{
 
 }
 
-#dispo{
+#source{
     border: 5px solid red;
     background-color: blue;
     width: 500px;
     height: 1000px;
 }
 
-#choisi{
+#destination{
     border: 5px solid red;
     background-color: blue;
     width: 500px;
@@ -96,4 +96,8 @@ h3{
     transition: background-color .24s,box-shadow .24s;
 
     
+}
+
+li{
+    list-style-type: none;
 }

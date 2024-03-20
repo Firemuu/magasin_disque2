@@ -6,34 +6,38 @@
 <title> Magasin du disque </title>
 </head>
 <body>
-    <script src="magasin.js"></script>
-    
+    <script src="magasin.js"></script> 
     <div id="first"> <!-- magasin de disques-->
         <h1>Magasin de disques</h1>
         <p>Tous les disques à 7€50!!!!</p>
         <p>cliquez sur l'image pour (dé)sélectionner un album</p>
-        <p id="prix">Montant du panier : 0 €</p>
+        <p id="prix">Montant du panier : <span id="prix"> 0 &#8364</span></p>
     </div>
-
-    <div id="second"> <!-- div des paniers-->
-        
-        <div id="dispo">
+    <div id="second"> <!-- div des paniers-->    
+        <div id="source">
             <h3>Albums disponibles</h4>
-                <div class="barblance"></div>
-                <img onclick="changerdiv1(this)" id="album" class="album" src="posthuman.jpg">
-                <img onclick="changerdiv1(this)" id="album" class="album" src="Sleep-Token-Take-Me-Back-to-Eden-Cover.jpeg">
-                <img onclick="changerdiv1(this)" id="album" class="album" src="meteora.jpg">
+                <div class="barblanche"></div>
+                <ul id="vitrine">
+                    <li>
+                        <img onclick="deplacer(this)" id="album" class="album" src="posthuman.jpg" alt=" Posthuman"> 
+                    </li>
 
-
+                    <li>
+                        <img onclick="deplacer(this)" id="album" class="album" src="Sleep-Token-Take-Me-Back-to-Eden-Cover.jpeg" alt=" Take me back to eden">
+                    </li>
+                    <li>
+                        <img onclick="deplacer(this)" id="album" class="album" src="meteora.jpg" alt=" Meteora">
+                    </li>
+                </ul>
         </div>
-
-        <div id="choisi">
+        <div id="destination">
             <h3>Albums choisis</h3>
                 <div class="barblanche"></div>
+                <ul id="panier">
+   				  
+                </ul>
 
         </div>
-
-
     </div>
 
     <div id="valider"> <!-- div pour le bouton de validation-->
@@ -41,9 +45,5 @@
         <button class="bouton" type="button"> Valider</button>
 
     </div>
-
 </body>
-
-
-
 </html>
