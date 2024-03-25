@@ -20,46 +20,43 @@ function deplacer(elementImg){
 document.getElementById('prix').innerHTML=nombrealbumchoisi*7.5 ;
 }
 
-/*
 
-function changeprix(){
-    var para = document.getElementById('prix')
-    if(nombrealbumchoisi == 0){
-        para.textContent= "Montant du panier : 0 €"
-    }
-    else if(nombrealbumchoisi == 1){
-        para.textContent= "Montant du panier : 7.50 €"
-    }
-    else if(nombrealbumchoisi == 2){
-        para.textContent= "Montant du panier : 15 €"
-    }
-    else if(nombrealbumchoisi == 3){
-        para.textContent= "Montant du panier : 22.50 €"
-    }
-}
-var descriptionsImages = {
-    "posthuman.jpg" : "Post human survival horror - Bring Me The Horizon",
-    "Sleep-Token-Take-Me-Back-to-Eden-Cover.jpeg" : "Take me back to eden - Sleep Token",
-    "meteora.jpg": "Meteora - Linkin Park",
-};
-function changerdiv1(image){
-    var cheminImage = image.src.substring(image.src.lastIndexOf('/') + 1);
-    var description = descriptionsImages[cheminImage];
+// Attachez l'événement à votre bouton dès que le DOM est chargé
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelector('.bouton').addEventListener('click', function() {
+        afficherFormulaire();
+    });
+});
 
-    var divDestination = document.getElementById('choisi');
-    var paragraphe = document.createElement('p');
-    paragraphe.textContent = description;
-    divDestination.appendChild(image);
-    divDestination.appendChild(paragraphe);
-    image.setAttribute('onclick','changerdiv2(this)');
-    nombrealbumchoisi += 1;
-    changeprix();
+function afficherFormulaire() {
+    // Créez ici votre formulaire ou faites apparaître un formulaire existant
+    // Par exemple :
+    var formulaireHTML = '<form id="monFormulaire">';
+    formulaireHTML += '<label for="nom">Nom :</label>';
+    formulaireHTML += '<input type="text" id="nom" name="nom"><br>';
+
+    formulaireHTML += '<label for="tel">Numéro de téléphone :</label>';
+    formulaireHTML += '<input type="text" id="tel" name="tel"><br>';
+
+    formulaireHTML += '<label for="prenom">Prénom :</label>';
+    formulaireHTML += '<input type="text" id="prenom" name="prenom"><br>';
+
+    formulaireHTML += '<label for="email">Email :</label>';
+    formulaireHTML += '<input type="email" id="email" name="email"><br>';
+
+    formulaireHTML += '<label for="carte">Numero de carte bancaire :</label>';
+    formulaireHTML += '<input type="text" id="carte" name="carte"><br>';
+
+    formulaireHTML += '<label for="groupe">Groupe préféré :</label>';
+    formulaireHTML += '<input type="text" id="groupe" name="groupe"><br>';
+
+    formulaireHTML += '<label for="couleur">Couleur préférée :</label>';
+    formulaireHTML += '<input type="text" id="couleur" name="couleur"><br>';
+
+    formulaireHTML += '<input type="submit" value="Envoyer">';
+    formulaireHTML += '</form>';
+
+    // Remplacez le contenu de la div avec l'ID "valider" par le formulaire
+    document.getElementById('valider').innerHTML = formulaireHTML;
 }
-function changerdiv2(image){
-    var divDestination = document.getElementById('choisi');
-    var divsource = document.getElementById('dispo');
-    divsource.appendChild(image);
-    image.setAttribute('onclick', 'changerdiv1(this)');
-    nombrealbumchoisi -= 1;
-    changeprix();
-}*/
+
