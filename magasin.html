@@ -1,51 +1,62 @@
 <!DOCTYPE html><html>
 <head>
     <link rel="stylesheet" type="text/CSS" href="magasin.css">
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale1">
-<title> Magasin du disque </title>
+    <meta charset="utf-8">
+    <title> Magasin du disque </title>
+    <script src="progbon.js" defer></script>
 </head>
 <body>
-    <script src="magasin.js"></script> 
-    <div id="first"> <!-- magasin de disques-->
+    <div id="welcome"> <!-- magasin de disques-->
         <h1>Magasin de disques</h1>
         <p>Tous les disques à 7€50!!!!</p>
         <p>cliquez sur l'image pour (dé)sélectionner un album</p>
-        <p id="prix">Montant du panier : <span id="prix"> 0 &#8364</span></p>
+        <p id="prix">Montant du panier : 0 €</p>
     </div>
-    <div id="second"> <!-- div des paniers-->    
-        <div id="source">
+
+    <div id="second"> <!-- div des paniers-->
+        
+        <div id="dispo">
             <h3>Albums disponibles</h4>
                 <div class="barblanche"></div>
-                <ul id="vitrine">
-                    <li>
-                        <img onclick="deplacer(this)" id="album" class="album" src="posthuman.jpg" alt=" Posthuman"> 
-                    </li>
+                <img class="album" alt="Posthuman" src="posthuman.jpg" id="album1" onclick="deplacer(this)">
+                <img class="album" alt="Take Me Back to Eden" src="Sleep-Token-Take-Me-Back-to-Eden-Cover.jpeg" id="album2" onclick="deplacer(this)">
+                <img class="album" alt="Meteora" src="meteora.jpg" id="album3" onclick="deplacer(this)">
 
-                    <li>
-                        <img onclick="deplacer(this)" id="album" class="album" src="Sleep-Token-Take-Me-Back-to-Eden-Cover.jpeg" alt=" Take me back to eden">
-                    </li>
-                    <li>
-                        <img onclick="deplacer(this)" id="album" class="album" src="meteora.jpg" alt=" Meteora">
-                    </li>
-                </ul>
+
         </div>
-        <div id="destination">
+
+        <div id="choisi">
             <h3>Albums choisis</h3>
                 <div class="barblanche"></div>
-                <ul id="panier">
-   				  
-                </ul>
 
         </div>
-    </div>
 
+
+    </div>
+    
+    <form action="" id="purchaseNotif">
+        <label for="">Full Name</label><br>
+        <input type="text"><br><br>
+        <label for="">Email</label><br>
+        <input type="email"><br><br>
+        <label for="">Phone number</label><br>
+        <input type="text"><br><br>
+        <label for="">Adresse</label><br>
+        <input type="address"><br><br>
+
+        <input type="submit" value="valider">
+        <button onclick="cancelPurchase">annuler</button>
+
+    </form>
     <div id="valider"> <!-- div pour le bouton de validation-->
 
-        <button class="bouton" type="button"> Valider</button>
-
-    
+        <button class="bouton" type="button" onclick="popupForm()"> Valider</button>
 
     </div>
+
+
 </body>
+
+
+
 </html>
